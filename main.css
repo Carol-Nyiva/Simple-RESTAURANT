@@ -21,3 +21,122 @@
     --body-font-color: #515151;
 
 }
+
+html
+{
+    font-family: var(--body-font);
+    font-size: 10px;
+    color: var(--body-font-color);
+    scroll-behavior: smooth; /*--Its going to animate and making scrolling smooth once you are at the footer and want to move to the top--*/
+}
+
+section
+{
+    padding: 3.9rem 0; /*TOP-BOTTOM and LEFT-RIGHT)*/
+}
+
+img
+{
+    width: 100%;
+    max-width: 100%;
+}
+a
+{
+    text-decoration: none;
+}
+
+p
+{
+    font-size:1.6em;
+}
+.container
+{
+    width: 100%;
+    max-width: 122.5rem;
+    margin:0 auto;
+    padding: 0 2.4rem;
+}
+
+/*.............HEADER STYLES.....................*/
+header
+{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.5),transparent);
+}
+.nav
+{
+    height: 7.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-toggle
+{
+    color: #fff;
+    font-size: 2.2em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /*Moving the menu-toggle along the y axis of the webpage*/
+    right: 2.5em;
+    cursor: pointer; /*gives the user an illusion that its clickable*/
+    z-index: 1500; /*This ensures that the menu toggle always remains on top*/
+}
+.fa-times
+{
+    display: none;
+}
+.nav-list
+{
+    list-style: none;
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: var(--main-font-color-dark);
+    width:80%;
+    height: 100vh;
+    padding: 4.4rem;
+    display: flex;
+    flex-direction: column; /*Flex-direction cant work without display flex*/
+    justify-content: space-around;
+    z-index: 1250;
+   transform: translateX(-100%);
+    transition: transform .5s;
+}
+
+.nav::before
+{
+    content: ''; /*set content to an empty string */
+    position: fixed;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,.8);
+    width: 100vw;
+    height: 100vh;
+    z-index:1000; /* Its on top of everything else but not the navlist and menu toggle */
+    opacity: 0; /* This is just for now but when we include JAVASCRIPT everything will be showing again with its color that isnt white*/
+    transform: scale(0);
+    transition: opacity .5s;
+}
+
+.open .fa-times  /*When the class open will be applied the X will show and the hamburger menu will close*/
+{
+    display:block;
+}
+.open .fa-bars
+{
+    display:none;
+}
+.open .nav-list
+{
+    transform:translateX(0);
+}
+.open .nav::before
+{
+    opacity: 1;
+    transform:scale(1);
+}
+/* JAVASCRIPT Will be used to make it the open class clickable */

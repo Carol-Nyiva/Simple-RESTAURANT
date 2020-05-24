@@ -19,6 +19,8 @@
 </head>
 
 <body>
+      <!----HEADER BEGINS HERE-->
+
 <header>
     <div class="container">
         <nav class="nav">
@@ -28,22 +30,22 @@
             </div>
             <a href="index.html" class="logo"><img src="images/logo-rosa.png" alt="Logo"></a>
             <ul class="nav-list">
-                <li class="nav-item">
+                <li class="nav-item"> 
                     <a href="index.html" class="nav-link">Home</a>
                 </li>
-                <li class="nav-list">
+                <li class="nav-item">
                     <a href="#" class="nav-link">Menu</a>
                 </li>
-                <li class="nav-list">
+                <li class="nav-item">
                     <a href="#" class="nav-link">Reservations</a>
                 </li>
-                <li class="nav-list">
+                <li class="nav-item" >
                     <a href="#" class="nav-link">News</a>
                 </li>
-                <li class="nav-list">
+                <li class="nav-item">
                     <a href="#" class="nav-link">Shop</a>
                 </li>
-                <li class="nav-list">
+                <li class="nav-item">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
             </ul>
@@ -78,7 +80,18 @@
 
 
 
+<script>
+    const selectElement = function (element){
+    return document.querySelector(element);
+};
 
+let menuToggler = selectElement('.menu-toggle');
+let body = selectElement('body');
+
+menuToggler.addEventListener('click', function () {
+    body.classList.toggle('open');
+});
+</script>
 
 
 
