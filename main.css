@@ -161,7 +161,7 @@ header
     color: var(--secondary-font-color);
 }
 
-/*---------------------------------------HERO----------------------------------------------*/
+/*-----------------------------HERO SECTION STYLING BEGINS HERE -------------------------------*/
 
 .hero
 {
@@ -276,3 +276,123 @@ header
     color: #fff;
     background-color: var(--secondary-font-color);
 }
+/*-----------------------------HERO SECTION STYLING ENDS HERE -------------------------------*/
+
+
+/*-----------------------------DISCOVER OUR STORY SECTION STYLING BEGINS HERE -------------------------------*/
+
+.global-headline
+{
+    text-align: center;
+    margin-top: 3.9em;
+}
+
+.discover-our-story .global-headline
+{
+    margin-top: 6.9rem;
+}
+.global-headline .asterisk
+{
+    color: var(--body-font-color);
+    margin: 2.4rem 0;
+}
+
+.headline-dark
+{
+    color: var(--main-font-color-dark);
+    letter-spacing: .7rem;
+    margin-right: -.7rem;
+}
+
+.Second-sub-headline
+{
+    font-size: 4.5rem;
+    font-family:var(--secondary-font);
+    color:var(--secondary-font-color);
+    font-weight: 700;
+    line-height: .42;
+    letter-spacing: -1px;
+}
+.Second-first-letter
+{
+    text-transform: uppercase;
+    font-size: 11rem;
+}
+
+.restaurant-info
+{
+    text-align: center;
+}
+
+.restaurant-description
+{
+    margin-bottom: 3rem;
+}
+
+.restaurant-description p
+{
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+}
+.body-btn
+{
+    font-size: 1.5rem;
+    color: var(--secondary-font-color);
+    position: relative;
+    transition: color .5s;
+}
+
+.body-btn::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-font-color);
+    transition: background-color .5s;
+}
+.body-btn:hover,
+.body-btn:focus
+{
+    color:var(--main-font-color-dark);
+}
+
+.body-btn:hover::before,
+.body-btn:focus::before
+{
+    background-color: var(--main-font-color-dark);
+}
+
+/*-----------------------------DISCOVER OUR STORY STYLING ENDS HERE -------------------------------*/
+
+/*-----------------------------TASTEFUL RECIPES STYLING BEGINS HERE -------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
